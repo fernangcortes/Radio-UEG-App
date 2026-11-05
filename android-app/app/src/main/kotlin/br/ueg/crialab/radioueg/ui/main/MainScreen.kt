@@ -1,11 +1,10 @@
 package br.ueg.crialab.radioueg.ui.main
 
 import android.annotation.SuppressLint
-import android.media.AudioAttributes
-import android.media.MediaPlayer
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import br.ueg.crialab.radioueg.playback.rememberRadioPlayer
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -79,8 +78,6 @@ import br.ueg.crialab.radioueg.ui.theme.IvorySurface
 import br.ueg.crialab.radioueg.ui.theme.RadioUEGEducativaTheme
 import br.ueg.crialab.radioueg.ui.theme.TextMuted
 import br.ueg.crialab.radioueg.ui.theme.TextPrimary
-
-private const val ZENO_STREAM_URL = "https://stream.zeno.fm/zs5dawmagc3vv"
 
 // 19 barras verticais exatas da logo da Rádio UEG Educativa
 private val LOGO_WAVE_HEIGHTS = listOf(
@@ -194,68 +191,7 @@ fun MainScreenContent(
     var selectedTab by remember { mutableIntStateOf(initialTab) }
     var showDesignStudio by remember { mutableStateOf(initialShowDesignStudio) }
     var useWebAppView by remember { mutableStateOf(false) }
-
-    var isPlaying by remember { mutableStateOf(false) }
-    var isBuffering by remember { mutableStateOf(false) }
-    var streamStatus by remember { mutableStateOf("Pronto para tocar • Zeno.fm Ao Vivo") }
-
-    val isPreview = LocalInspectionMode.current
-    val mediaPlayer = remember(isPreview) { if (isPreview) null else MediaPlayer() }
-
-    DisposableEffect(mediaPlayer) {
-        onDispose {
-            try {
-                if (mediaPlayer?.isPlaying == true) {
-                    mediaPlayer.stop()
-                }
-                mediaPlayer?.release()
-            } catch (_: Exception) {
-            }
-        }
-    }
-
-    fun toggleLiveStream() {
-        val player = mediaPlayer ?: return
-        if (isPlaying || isBuffering) {
-            try {
-                player.reset()
-            } catch (_: Exception) {
-            }
-            isPlaying = false
-            isBuffering = false
-            streamStatus = "Transmissão pausada"
-        } else {
-            isBuffering = true
-            streamStatus = "Conectando ao stream Zeno.fm..."
-            try {
-                player.reset()
-                player.setAudioAttributes(
-                    AudioAttributes.Builder()
-                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                        .setUsage(AudioAttributes.USAGE_MEDIA)
-                        .build()
-                )
-                player.setDataSource(ZENO_STREAM_URL)
-                player.setOnPreparedListener { mp ->
-                    mp.start()
-                    isBuffering = false
-                    isPlaying = true
-                    streamStatus = "NO AR AO VIVO • Rádio UEG Educativa"
-                }
-                player.setOnErrorListener { _, _, _ ->
-                    isBuffering = false
-                    isPlaying = false
-                    streamStatus = "Reconectando ao stream Zeno.fm..."
-                    true
-                }
-                player.prepareAsync()
-            } catch (e: Exception) {
-                isBuffering = false
-                isPlaying = false
-                streamStatus = "Erro ao iniciar stream: ${e.localizedMessage ?: "verifique rede"}"
-            }
-        }
-    }
+    val radioPlayer = rememberRadioPlayer()
 
     val theme = DESIGN_PRESETS[selectedPresetIndex]
 
@@ -296,7 +232,7 @@ fun MainScreenContent(
                         RadioWaveLogoCompose(
                             accentColor = theme.accent,
                             multiColor = multiColorWaves,
-                            isAnimating = isPlaying
+                            isAnimating = radioPlayer.isPlaying
                         )
                         Spacer(modifier = Modifier.width(10.dp))
                         Column {
@@ -501,10 +437,10 @@ fun MainScreenContent(
                     0 -> LivePlayerSection(
                         theme = theme,
                         multiColorWaves = multiColorWaves,
-                        isPlaying = isPlaying,
-                        isBuffering = isBuffering,
-                        streamStatus = streamStatus,
-                        onTogglePlay = { toggleLiveStream() },
+                        isPlaying = radioPlayer.isPlaying,
+                        isBuffering = radioPlayer.isBuffering,
+                        streamStatus = radioPlayer.streamStatus,
+                        onTogglePlay = radioPlayer.togglePlay,
                         onOpenSchedule = { selectedTab = 1 }
                     )
                     1 -> ScheduleSection(theme = theme)
