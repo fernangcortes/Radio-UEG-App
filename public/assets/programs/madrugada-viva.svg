@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F071E"/>
+      <stop offset="50%" stop-color="#1E1136"/>
+      <stop offset="100%" stop-color="#0D3B42"/>
+    </linearGradient>
+    <linearGradient id="moon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FFF0"/>
+      <stop offset="50%" stop-color="#8CE0C4"/>
+      <stop offset="100%" stop-color="#158481"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C91854"/>
+      <stop offset="50%" stop-color="#F7AD1C"/>
+      <stop offset="100%" stop-color="#00FFF0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Stars & ambient glow -->
+  <circle cx="820" cy="240" r="190" fill="url(#moon)" opacity="0.15"/>
+  <circle cx="820" cy="240" r="110" fill="url(#moon)" opacity="0.9"/>
+  <circle cx="780" cy="215" r="95" fill="#170E2A"/>
+  <circle cx="210" cy="180" r="3" fill="#fff" opacity="0.7"/>
+  <circle cx="340" cy="120" r="4" fill="#8CE0C4" opacity="0.8"/>
+  <circle cx="520" cy="220" r="2.5" fill="#fff" opacity="0.5"/>
+  <circle cx="160" cy="360" r="3.5" fill="#F7AD1C" opacity="0.7"/>
+  <!-- Sound waves -->
+  <g opacity="0.35" stroke="url(#wave)" stroke-width="5" fill="none">
+    <path d="M 0 760 Q 270 640 540 760 T 1080 760"/>
+    <path d="M 0 810 Q 270 690 540 810 T 1080 810"/>
+    <path d="M 0 860 Q 270 740 540 860 T 1080 860"/>
+  </g>
+  <!-- Typography -->
+  <rect x="90" y="420" width="260" height="44" rx="22" fill="#158481"/>
+  <text x="220" y="449" font-family="sans-serif" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="3">00H ÀS 06H</text>
+  <text x="90" y="575" font-family="sans-serif" font-size="108" font-weight="900" fill="#ffffff" letter-spacing="-2">MADRUGADA</text>
+  <text x="90" y="695" font-family="sans-serif" font-size="116" font-weight="900" fill="url(#moon)" letter-spacing="2">VIVA</text>
+  <text x="90" y="765" font-family="sans-serif" font-size="30" font-weight="500" fill="#cbd5e1">Instrumental BR • Bossa • Clássicos &amp; MPB</text>
+  <!-- Footer bar -->
+  <rect x="0" y="1060" width="216" height="20" fill="#C91854"/>
+  <rect x="216" y="1060" width="216" height="20" fill="#E84136"/>
+  <rect x="432" y="1060" width="216" height="20" fill="#F7AD1C"/>
+  <rect x="648" y="1060" width="216" height="20" fill="#9BA538"/>
+  <rect x="864" y="1060" width="216" height="20" fill="#158481"/>
+  <text x="90" y="990" font-family="sans-serif" font-size="26" font-weight="700" fill="#8CE0C4" letter-spacing="2">RÁDIO UEG EDUCATIVA • CRIALAB|UEG</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bgMus" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#160D24"/>
+      <stop offset="50%" stop-color="#251737"/>
+      <stop offset="100%" stop-color="#158481"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgMus)"/>
+  <!-- Vinyl record illustration -->
+  <g transform="translate(790, 290)" opacity="0.35">
+    <circle cx="0" cy="0" r="210" fill="#0B0612" stroke="#8CE0C4" stroke-width="6"/>
+    <circle cx="0" cy="0" r="160" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+    <circle cx="0" cy="0" r="62" fill="#C91854"/>
+    <circle cx="0" cy="0" r="18" fill="#160D24"/>
+  </g>
+  <rect x="90" y="430" width="380" height="46" rx="23" fill="#9BA538"/>
+  <text x="280" y="460" font-family="sans-serif" font-size="22" font-weight="900" fill="#160D24" text-anchor="middle" letter-spacing="2">CURADORIA RÁDIO UEG</text>
+  <text x="90" y="585" font-family="sans-serif" font-size="95" font-weight="900" fill="#ffffff">PROGRAMAÇÃO</text>
+  <text x="90" y="705" font-family="sans-serif" font-size="118" font-weight="900" fill="#8CE0C4">MUSICAL</text>
+  <text x="90" y="785" font-family="sans-serif" font-size="30" font-weight="500" fill="#e2e8f0">MPB • Música Goiana • Blues • Jazz • Drops Gramatical</text>
+  <text x="90" y="990" font-family="sans-serif" font-size="26" font-weight="700" fill="#F7AD1C" letter-spacing="2">RÁDIO UEG EDUCATIVA • CRIALAB|UEG</text>
+  <rect x="0" y="1060" width="216" height="20" fill="#C91854"/>
+  <rect x="216" y="1060" width="216" height="20" fill="#E84136"/>
+  <rect x="432" y="1060" width="216" height="20" fill="#F7AD1C"/>
+  <rect x="648" y="1060" width="216" height="20" fill="#9BA538"/>
+  <rect x="864" y="1060" width="216" height="20" fill="#158481"/>
+</svg>

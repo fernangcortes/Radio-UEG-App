@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bgRock" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0A1E"/>
+      <stop offset="50%" stop-color="#6A0D25"/>
+      <stop offset="100%" stop-color="#E84136"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgRock)"/>
+  <polygon points="680,140 820,140 730,310 860,310 640,560 700,360 610,360" fill="#F7AD1C" opacity="0.28"/>
+  <rect x="90" y="430" width="350" height="46" rx="23" fill="#F7AD1C"/>
+  <text x="265" y="460" font-family="sans-serif" font-size="22" font-weight="900" fill="#160D24" text-anchor="middle" letter-spacing="2">CENA GOIANA • RÁDIO UEG</text>
+  <text x="90" y="610" font-family="sans-serif" font-size="140" font-weight="900" fill="#ffffff" letter-spacing="-3">ROCK</text>
+  <text x="90" y="750" font-family="sans-serif" font-size="140" font-weight="900" fill="#F7AD1C" letter-spacing="2">GYN</text>
+  <text x="90" y="825" font-family="sans-serif" font-size="30" font-weight="600" fill="#ffe4e6">O rock produzido em Goiás, festivais e cena independente</text>
+  <text x="90" y="990" font-family="sans-serif" font-size="26" font-weight="700" fill="#ffffff" letter-spacing="2">RÁDIO UEG EDUCATIVA • ACERVO UEG</text>
+  <rect x="0" y="1060" width="216" height="20" fill="#C91854"/>
+  <rect x="216" y="1060" width="216" height="20" fill="#E84136"/>
+  <rect x="432" y="1060" width="216" height="20" fill="#F7AD1C"/>
+  <rect x="648" y="1060" width="216" height="20" fill="#9BA538"/>
+  <rect x="864" y="1060" width="216" height="20" fill="#158481"/>
+</svg>

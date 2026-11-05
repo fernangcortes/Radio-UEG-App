@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --crialab-magenta: #C91854;
+  --crialab-coral: #E84136;
+  --crialab-amber: #F7AD1C;
+  --crialab-olive: #9BA538;
+  --crialab-teal: #158481;
+
+  /* Default: Branco Marfim (Warm Ivory) */
+  --app-bg: #FAF7F0;
+  --app-surface: #FFFFFF;
+  --app-elevated: #F3EFE6;
+  --app-text: #18181B;
+  --app-text-muted: #57534E;
+  --app-border: #E6DFD3;
+  --app-accent: #158481;
+  --app-accent-2: #C91854;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* CriaLab Official 5-Color Bar */
+.crialab-colorbar {
+  background: linear-gradient(
+    90deg,
+    #C91854 0%, #C91854 20%,
+    #E84136 20%, #E84136 40%,
+    #F7AD1C 40%, #F7AD1C 60%,
+    #9BA538 60%, #9BA538 80%,
+    #158481 80%, #158481 100%
+  );
+}
+
+/* Animated Soundwave Bars matching Rádio UEG Educativa Logo */
+@keyframes wave-pulse {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.42);
+  }
+}
+
+.wave-bar-animated {
+  transform-origin: center bottom;
+  animation: wave-pulse 1.15s ease-in-out infinite;
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: slow-spin 18s linear infinite;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(21, 132, 129, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(21, 132, 129, 0.65);
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Rádio UEG Educativa • CriaLab",
+  "short_name": "Rádio UEG",
+  "description": "Ouça a Rádio UEG Educativa ao vivo, acompanhe a programação, notícias culturais e podcasts do CriaLab|UEG.",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "background_color": "#160D24",
+  "theme_color": "#251737",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/programs/sintonia-cover.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/brand/logo-radio-ueg-white.png",
+      "sizes": "220x104",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ouvir Só Som (Play Direto)",
+      "short_name": "Só Som",
+      "description": "Abre a Rádio UEG já tocando em modo econômico",
+      "url": "/?autoplay=1&eco=1"
+    },
+    {
+      "name": "Programação de Hoje",
+      "short_name": "Programação",
+      "description": "Veja o que está no ar na Rádio UEG",
+      "url": "/?tab=programacao"
+    }
+  ]
+}

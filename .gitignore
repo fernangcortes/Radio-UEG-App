@@ -1,0 +1,15 @@
+node_modules
+dist
+.env
+.env.local
+.vercel
+_brand_assets
+*.zip
+android-app/.gradle
+android-app/build
+android-app/app/build
+android-app/local.properties
+android-app/.idea
+.agents
+*.tsbuildinfo
+android-app/.kotlin
