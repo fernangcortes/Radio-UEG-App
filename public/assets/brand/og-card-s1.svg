@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Fundo Marfim Nobre -->
+  <rect width="1200" height="630" fill="#FAF7F0"/>
+  
+  <!-- Medalhão Circular 6E Centralizado -->
+  <circle cx="600" cy="315" r="170" fill="#FFFFFF" stroke="#18181B" stroke-opacity="0.06" stroke-width="4"/>
+  
+  <!-- Ondas CriaLab -->
+  <g transform="translate(488, 215)">
+    <rect x="0"   y="75"  width="16" height="66"  rx="8" fill="#C91854"/>
+    <rect x="25"  y="44"  width="16" height="128" rx="8" fill="#E84136"/>
+    <rect x="50"  y="22"  width="16" height="172" rx="8" fill="#E84136"/>
+    <rect x="75"  y="0"   width="16" height="216" rx="8" fill="#F7AD1C"/>
+    <rect x="100" y="35"  width="16" height="146" rx="8" fill="#F7AD1C"/>
+    <rect x="125" y="7"   width="16" height="202" rx="8" fill="#9BA538"/>
+    <rect x="150" y="38"  width="16" height="140" rx="8" fill="#9BA538"/>
+    <rect x="175" y="15"  width="16" height="186" rx="8" fill="#158481"/>
+    <rect x="200" y="48"  width="16" height="120" rx="8" fill="#158481"/>
+    <rect x="225" y="80"  width="16" height="56"  rx="8" fill="#158481"/>
+  </g>
+</svg>
