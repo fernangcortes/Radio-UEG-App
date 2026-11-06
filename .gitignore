@@ -13,3 +13,5 @@ android-app/.idea
 .agents
 *.tsbuildinfo
 android-app/.kotlin
+
+.vercel
